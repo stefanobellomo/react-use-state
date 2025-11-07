@@ -13,6 +13,10 @@ export default function Button({ languages }) {
         }
     }
 
+    function getLanguage(id) {
+        return languages.find(language => language.id == id)
+    }
+
     return (
 
         <div>
@@ -20,9 +24,9 @@ export default function Button({ languages }) {
             {languages.map(item => (
                 <>
                     <button key={item.id} onClick={() => handleClick(item.id)} >{item.title}</button>
-                    {item.id === active && <Card title={item.title} description={item.description} />}
                 </>
             ))}
+            {active !== 0 && <Card title={getLanguage(active).title} description={getLanguage(active).description} />}
         </div>
     )
 }
