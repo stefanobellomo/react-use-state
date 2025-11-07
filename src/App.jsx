@@ -38,7 +38,7 @@ function App() {
 
   return (
     <>
-      <Header language={languages} />
+      <Header languages={languages} />
     </>
   )
 }

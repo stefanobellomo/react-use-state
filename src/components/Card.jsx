@@ -1,13 +1,12 @@
-export default function Card({ language }) {
+export default function Card(props) {
 
     return (
         <>
-            {language.map(item => (
-                <div className="card" key={item.id}>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                </div>
-            ))}
+            <div className="card">
+                <h3>{props.title}</h3>
+                <p>{props.description}</p>
+            </div>
+
         </>
     )
 }

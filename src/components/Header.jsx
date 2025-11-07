@@ -1,13 +1,12 @@
-import Card from "./Card";
+import { useState } from "react";
 import Button from "./Button";
 
-export default function Header({ language }) {
+export default function Header({ languages }) {
 
     return (
         <>
             <h1>Learn Web development</h1>
-            <Button language={language} />
-            <Card language={language} />
+            <Button languages={languages} />
         </>
     )
 }
